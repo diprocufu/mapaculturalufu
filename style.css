@@ -1,0 +1,169 @@
+/* ===== Layout Principal ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px 48px 10px 10px; /* espaço p/ botão no canto */
+  text-align: center;
+  position: relative; /* para posicionar o botão */
+}
+
+main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+#map {
+  flex: 3;
+  height: 100%;
+}
+
+aside {
+  flex: 1;
+  background: #ecf0f1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* ===== Botão Tela Cheia (canto superior direito) ===== */
+.btn-fullscreen {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.btn-fullscreen:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ===== Dropdown Menus ===== */
+.dropdown {
+  margin-bottom: 10px;
+}
+
+.dropdown-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 4px;
+  color: white;
+}
+
+/* Cor estável baseada na ordem dos DROPDOWNS (ignora o <h2>) */
+aside .dropdown:nth-of-type(1) .dropdown-btn {
+  background: #3498db; /* Azul UFU */
+}
+aside .dropdown:nth-of-type(1) .dropdown-btn:hover {
+  background: #2980b9;
+}
+
+aside .dropdown:nth-of-type(2) .dropdown-btn {
+  background: #27ae60; /* Verde Cidade */
+}
+aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
+  background: #1e8449;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background: #f1f1f1;
+}
+
+.dropdown.active .dropdown-content {
+  display: flex;
+}
+
+/* ===== Leaflet Customização ===== */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Ícones Font Awesome no menu ===== */
+.dropdown-content i {
+  margin-right: 6px;
+  color: #2c3e50;
+}
+
+/* ===== (opcional) rótulo mini para blocos, caso seja usado no futuro ===== */
+.bloco-label .label-chip {
+  padding: 2px 6px;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  #map {
+    height: 60vh;
+    flex: none;
+  }
+
+  aside {
+    flex: none;
+    height: 40vh;
+  }
+
+  .dropdown-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}

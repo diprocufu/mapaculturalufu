@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Cultural UFU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ADICIONADO -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-landmark"></i> Mapa Cultural UFU</h1>
+  </header>
+
+  <main>
+    <div id="map"></div>
+    <aside>
+      <h2>Espaços Culturais</h2>
+
+      <!-- Dropdown UFU -->
+      <div class="dropdown">
+        <button class="dropdown-btn">🎓 Espaços UFU</button>
+        <div class="dropdown-content" id="espacos-ufu"></div>
+      </div>
+
+      <!-- Dropdown Cidade -->
+      <div class="dropdown">
+        <button class="dropdown-btn">🏙️ Espaços da Cidade</button>
+        <div class="dropdown-content" id="espacos-cidade"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    Desenvolvido por André C. Machado - <strong>DIPROC / DICULT / PROEXC - UFU</strong> por meio de IA
+  </footer>
+
+  <script>
+    // ===== MAPA E CAMADAS BASE =====
+    const map = L.map('map').setView([-18.9186, -48.255], 15);
+
+    const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+      maxZoom: 22
+    });
+
+    const cartoLight = L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 22
+    });
+
+    const esriSat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles © Esri'
+    });
+
+    // Padrão: OSM
+    osm.addTo(map);
+
+    const baseMaps = {
+      "OSM Padrão (Padrão)": osm,
+      "Carto Light": cartoLight,
+      "Esri Satélite": esriSat
+    };
+
+    L.control.layers(baseMaps).addTo(map);
+
+    // ===== FUNÇÃO: Ícone Font Awesome por tipo =====
+    function faFor(tipo) {
+      const t = (tipo || '').toLowerCase();
+      if (t.includes('museu')) return 'landmark';
+      if (t.includes('teatro')) return 'masks-theater';
+      if (t.includes('cinema')) return 'film';
+      if (t.includes('curso')) return 'graduation-cap';
+      if (t.includes('centro')) return 'building';
+      if (t.includes('música') || t.includes('musica')) return 'music';
+      if (t.includes('praça') || t.includes('praca')) return 'tree';
+      if (t.includes('administr')) return 'building-columns';
+      return 'map-pin';
+    }
+
+    // ===== CARREGA ESPAÇOS =====
+    fetch('espacos.json')
+      .then(response => response.json())
+      .then(data => {
+        data.espacos.forEach(espaco => {
+          // Marcador no mapa
+          const icon = (espaco.categoria && espaco.categoria.toLowerCase() === "ufu")
+            ? blueIcon
+            : greenIcon;
+
+          const marker = L.marker([espaco.latitude, espaco.longitude], { icon }).addTo(map);
+          const telefone = espaco.telefone ? `<br><b>Tel.:</b> ${espaco.telefone}` : '';
+          const site = espaco.site ? `<br><a href="${espaco.site}" target="_blank">Site oficial</a>` : '';
+          const email = espaco.email ? `<br><b>Email:</b> <a href="mailto:${espaco.email}">${espaco.email}</a>` : '';
+
+          marker.bindPopup(
+            `<b>${espaco.nome}</b><br>${espaco.endereco || ''}${telefone}${site}${email}`
+          );
+
+          // Decide em qual lista (UFU ou Cidade)
+          const container = (espaco.categoria && espaco.categoria.toLowerCase() === "ufu")
+            ? document.getElementById("espacos-ufu")
+            : document.getElementById("espacos-cidade");
+
+          // Item com ícone
+          const item = document.createElement("a");
+          const iconName = faFor(espaco.tipo);
+          item.href = "#";
+          item.innerHTML = `<i class="fa-solid fa-${iconName}"></i> ${espaco.nome}`;
+          item.onclick = () => {
+            map.setView([espaco.latitude, espaco.longitude], 18);
+            marker.openPopup();
+          };
+
+          container.appendChild(item);
+        });
+      });
+
+    // ===== DROPDOWNS =====
+    document.querySelectorAll(".dropdown-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.parentElement.classList.toggle("active");
+      });
+    });
+
+    // ===== ÍCONES DE MARCADORES (azul UFU / verde Cidade) =====
+    const blueIcon = new L.Icon({
+      iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+    const greenIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+    // ===== BOTÃO TELA CHEIA =====
+    const fsButton = L.control({ position: 'topleft' });
+    fsButton.onAdd = function () {
+      const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+      div.innerHTML = '<a href="#" title="Tela cheia"><i class="fa-solid fa-expand"></i></a>';
+      div.style.backgroundColor = 'white';
+      div.style.width = '34px';
+      div.style.height = '34px';
+      div.style.display = 'flex';
+      div.style.alignItems = 'center';
+      div.style.justifyContent = 'center';
+      div.style.cursor = 'pointer';
+
+      div.onclick = () => {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
+      };
+      return div;
+    };
+    fsButton.addTo(map);
+  </script>
+</body>
+</html>
