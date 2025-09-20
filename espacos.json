@@ -216,7 +216,7 @@
       "longitude": -48.255453112868,
       "endereco": "Bloco 1I, Campus Santa Mônica",
       "categoria": "UFU",
-      "telefone": "34) 3239-4244",
+      "telefone": "(34) 3239-4244",
       "site": "https://www.iarte.ufu.br/artes-visuais",
       "email": "coart@ufu.br"
     },    
@@ -227,8 +227,9 @@
       "longitude": -48.26338607707621,
       "endereco": "R. Osório José da Cunha, 685",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3232-1063",
+      "site": "https://www.conservatoriouberlandia.com.br/",
+      "email": "escola.167452.secretaria@educacao.mg.gov.br"
     },
     {
       "nome": "Escola Municipal Cidade da Música",
@@ -237,8 +238,9 @@
       "longitude": -48.3018102978366,
       "endereco": "R. das Juritis, 1315",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3219-9323",
+      "site": "https://www.uberlandia.mg.gov.br/inscricao-escolar/escola-municipal-cidade-da-musica/",
+      "email": "cidadedamusica@uberlandia.mg.gov.br"
     },
     {
       "nome": "Museu de Arte Sacra da Diocese de Uberlândia",
@@ -247,7 +249,7 @@
       "longitude": -48.28250280665032,
       "endereco": "Praça Dr. Duarte - Fundinho",
       "categoria": "Cidade",
-      "telefone": "",
+      "telefone": "(34) 996870-4655",
       "site": ""
     },
     {
@@ -257,8 +259,20 @@
       "longitude": -48.281531717441446,
       "endereco": "Praça Clarimundo Carneiro, 67 - Centro",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(034) 3214-0068",
+      "site": "https://www.uberlandia.mg.gov.br/tags/museu-municipal/",
+      "email": "museumunicipal@uberlandia.mg.gov.br"
+    },
+    {
+      "nome": "Coreto Municipal",
+      "tipo": "praça",
+      "latitude": -18.9236416511344,
+      "longitude": -48.281639580375206,
+      "endereco": "Praça Clarimundo Carneiro, 67 - Centro",
+      "categoria": "Cidade",
+      "telefone": "(34) 3236-8011",
+      "site": "https://www.uberlandia.mg.gov.br/prefeitura/secretarias/cultura-e-turismo/",
+      "email": "secretariamunicipaldecultura@uberlandia.mg.gov.br"
     },
     {
       "nome": "Centro Municipal de Cultura",
@@ -267,8 +281,9 @@
       "longitude": -48.2750693869828,
       "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3236-8011",
+      "site": "https://www.uberlandia.mg.gov.br/prefeitura/secretarias/cultura-e-turismo/",
+      "email": "secretariamunicipaldecultura@uberlandia.mg.gov.br"
     },
     {
       "nome": "Oficina Cultural de Uberlândia",
@@ -277,8 +292,9 @@
       "longitude": -48.282240388386214,
       "endereco": "Praça Clarimundo Carneiro, 204 - Centro",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3214-9889 / (34) 3231-8608",
+      "site": "",
+      "email": "oficinacultural@uberlandia.mg.gov.br"
     },
     {
       "nome": "Casa da Cultura de Uberlândia",
@@ -287,8 +303,9 @@
       "longitude": -48.2854482827609,
       "endereco": "Praça Cel. Carneiro, 89 - Fundinho",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3255-8252",
+      "site": "",
+      "email": "casadacultura@uberlandia.mg.gov.br"
     },
     {
       "nome": "Cine Teatro Nininha Rocha",
@@ -297,8 +314,9 @@
       "longitude": -48.2750693869828,
       "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3235-9182",
+      "site": "",
+      "email": "cineteatronininharocha@uberlandia.mg.gov.br"
     },
     {
       "nome": "Banda Sinfônica Municipal",
@@ -307,8 +325,9 @@
       "longitude": -48.2750693869828,
       "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3236-8011",
+      "site": "",
+      "email": "bandamunicipal@uberlandia.mg.gov.br"
     },
     {
       "nome": "Teatro de Bolso do Mercado Municipal",
@@ -317,8 +336,9 @@
       "longitude": -48.2819195058515,
       "endereco": "R. Olegário Maciel, 255 - Centro",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3235-7790",
+      "site": "",
+      "email": "cultmercado@uberlandia.mg.gov.br"
     },
     {
       "nome": "Teatro Municipal de Uberlândia",
@@ -327,8 +347,53 @@
       "longitude": -48.25272889612306,
       "endereco": "Av. Rondon Pacheco, 7070 - Tibery",
       "categoria": "Cidade",
-      "telefone": "",
-      "site": ""
+      "telefone": "(34) 3235-1568",
+      "site": "",
+      "email": "teatromunicipaluberlandia@gmail.com"
+    },
+    {
+      "nome": "Palco de Arte - UAI Q Dança",
+      "tipo": "teatro",
+      "latitude": -18.923686005295522,
+      "longitude": -48.28410137063889,
+      "endereco": "Rua Coronel Manoel Alves, 22, bairro Fundinho",
+      "categoria": "Cidade",
+      "telefone": "(34)99698-2956",
+      "site": "http://uaiqdanca.com.br/",
+      "email": "uaiqdanca@gmail.com"
+    },
+    {
+      "nome": "Teatro do Grupontapé",
+      "tipo": "teatro",
+      "latitude": -18.9098593046293,
+      "longitude": -48.27028287116448,
+      "endereco": "R. Tupaciguara, 471, Uberlândia - MG",
+      "categoria": "Cidade",
+      "telefone": "(34)3213-1325",
+      "site": "https://www.grupontape.com.br/",
+      "email": "rubemreis@balaiodocerrado.com.br / marisa@grupontape.com.br"
+    },
+    {
+      "nome": "Ponto dos Truões",
+      "tipo": "teatro",
+      "latitude": -18.919399712611096,
+      "longitude": -48.25148504812082,
+      "endereco": "Av. Ana Godoy De Sousa, 381 - Santa Mônica, Uberlândia - MG",
+      "categoria": "Cidade",
+      "telefone": "(34)3237-9440",
+      "site": "http://www.trupedetruoes.com.br/",
+      "email": "trupedetruoes@gmail.com / contatotruoes@gmail.com"
+    },
+    {
+      "nome": "CEU Shopping Park",
+      "tipo": "teatro",
+      "latitude": -18.99080027147741,
+      "longitude": -48.26741416931792,
+      "endereco": "R. Juvenília Mota Leite, 700 - Shopping Park, Uberlândia - MG",
+      "categoria": "Cidade",
+      "telefone": "(34)3253-1204",
+      "site": "",
+      "email": ""
     }
   ]
 }
