@@ -30,7 +30,10 @@ aside {
   flex: 1;
   background: #ecf0f1;
   padding: 10px;
-  overflow-y: auto;
+  overflow-y: auto;               /* mantém rolagem */
+  -webkit-overflow-scrolling: touch; /* rolagem suave no celular */
+  max-height: 100vh;              /* impede que ultrapasse a tela */
+  box-sizing: border-box;         /* corrige cálculo do padding */
 }
 
 footer {
