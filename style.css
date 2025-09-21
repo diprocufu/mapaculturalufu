@@ -158,7 +158,7 @@ aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
 
   aside {
     flex: none;
-    max-height: 40vh;
+    max-height: 100vh;                 /* ocupa toda a altura da tela */
     overflow-y: scroll;                /* força sempre a rolagem */
     -webkit-overflow-scrolling: touch; /* rolagem suave no iOS */
     overscroll-behavior: contain;      /* bloqueia o "efeito mola" */
