@@ -156,12 +156,13 @@ aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
     flex: none;
   }
 
- aside {
-  flex: none;
-  max-height: 40vh;  /* permite rolar dentro */
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
+  aside {
+    flex: none;
+    max-height: 40vh;
+    overflow-y: scroll;                /* força sempre a rolagem */
+    -webkit-overflow-scrolling: touch; /* rolagem suave no iOS */
+    overscroll-behavior: contain;      /* bloqueia o "efeito mola" */
+  }
 
   .dropdown-btn {
     font-size: 14px;
