@@ -1,4 +1,6 @@
-/* ===== Layout Principal ===== */
+/* ===================================================
+   🧱 LAYOUT PRINCIPAL
+=================================================== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -10,15 +12,15 @@ body {
 header {
   background: #2c3e50;
   color: #fff;
-  padding: 10px 48px 10px 10px; /* espaço p/ botão no canto */
+  padding: 10px 48px 10px 10px;
   text-align: center;
-  position: relative; /* para posicionar o botão */
+  position: relative;
 }
 
 main {
   display: flex;
   flex: 1;
-  overflow: hidden;
+  overflow: visible; /* ✅ permite que menus flutuem corretamente */
 }
 
 #map {
@@ -30,10 +32,14 @@ aside {
   flex: 1;
   background: #ecf0f1;
   padding: 10px;
-  overflow-y: auto;               /* mantém rolagem */
-  -webkit-overflow-scrolling: touch; /* rolagem suave no celular */
-  max-height: 100vh;              /* impede que ultrapasse a tela */
-  box-sizing: border-box;         /* corrige cálculo do padding */
+  padding-bottom: 40px;           /* ✅ espaço extra para menus no celular */
+  scroll-padding-top: 60px;       /* ✅ facilita retorno ao botão no celular */
+  overflow: visible;              /* ✅ libera menus flutuantes */
+  -webkit-overflow-scrolling: touch;
+  max-height: 100vh;
+  box-sizing: border-box;
+  position: relative;             /* ✅ necessário para menus absolutos */
+  z-index: 1000;                  /* ✅ garante que menus fiquem acima do mapa */
 }
 
 footer {
@@ -44,7 +50,10 @@ footer {
   font-size: 14px;
 }
 
-/* ===== Botão Tela Cheia (canto superior direito) ===== */
+
+/* ===================================================
+   🔲 BOTÃO TELA CHEIA
+=================================================== */
 .btn-fullscreen {
   position: absolute;
   top: 10px;
@@ -63,9 +72,13 @@ footer {
   background: rgba(255,255,255,0.25);
 }
 
-/* ===== Dropdown Menus ===== */
+
+/* ===================================================
+   📂 DROPDOWN MENUS
+=================================================== */
 .dropdown {
   margin-bottom: 10px;
+  position: relative;
 }
 
 .dropdown-btn {
@@ -79,28 +92,41 @@ footer {
   color: white;
 }
 
-/* Cor estável baseada na ordem dos DROPDOWNS (ignora o <h2>) */
+/* 🎓 UFU */
 aside .dropdown:nth-of-type(1) .dropdown-btn {
-  background: #3498db; /* Azul UFU */
+  background: #3498db;
 }
 aside .dropdown:nth-of-type(1) .dropdown-btn:hover {
   background: #2980b9;
 }
 
+/* 🏙️ Cidade */
 aside .dropdown:nth-of-type(2) .dropdown-btn {
-  background: #27ae60; /* Verde Cidade */
+  background: #27ae60;
 }
 aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
   background: #1e8449;
 }
 
+/* 🔽 Conteúdo do menu */
 .dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   display: none;
   flex-direction: column;
   background: #fff;
   border: 1px solid #ddd;
   margin-top: 5px;
   border-radius: 4px;
+
+  max-height: 300px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  z-index: 999;
 }
 
 .dropdown-content a {
@@ -120,19 +146,28 @@ aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
   display: flex;
 }
 
-/* ===== Leaflet Customização ===== */
+
+/* ===================================================
+   🗺️ LEAFLET MAP
+=================================================== */
 .leaflet-container {
   width: 100%;
   height: 100%;
 }
 
-/* ===== Ícones Font Awesome no menu ===== */
+
+/* ===================================================
+   🎨 ÍCONES NO MENU
+=================================================== */
 .dropdown-content i {
   margin-right: 6px;
   color: #2c3e50;
 }
 
-/* ===== (opcional) rótulo mini para blocos, caso seja usado no futuro ===== */
+
+/* ===================================================
+   🏷️ RÓTULOS FUTUROS (opcional)
+=================================================== */
 .bloco-label .label-chip {
   padding: 2px 6px;
   background: #fff;
@@ -145,24 +180,27 @@ aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
   white-space: nowrap;
 }
 
-/* ===== Responsividade ===== */
+
+/* ===================================================
+   📱 RESPONSIVIDADE
+=================================================== */
 @media (max-width: 768px) {
   main {
     flex-direction: column;
   }
 
   #map {
-    height: 60vh;
+    height: 45vh;
     flex: none;
   }
 
-aside {
-  flex: none;
-  height: auto;                        /* cresce conforme conteúdo */
-  max-height: none;                    /* sem limite artificial */
-  overflow-y: auto;                    /* rolagem só se ultrapassar a tela */
-  -webkit-overflow-scrolling: touch;   /* rolagem suave no iOS */
-}
+  aside {
+    flex: none;
+    height: auto;
+    max-height: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
   .dropdown-btn {
     font-size: 14px;

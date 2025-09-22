@@ -101,7 +101,8 @@
           );
 
           // Decide em qual lista (UFU ou Cidade)
-          const container = (espaco.categoria && espaco.categoria.toLowerCase() === "ufu")
+          const categoria = (espaco.categoria || "").trim().toLowerCase();
+          const container = categoria === "ufu"
             ? document.getElementById("espacos-ufu")
             : document.getElementById("espacos-cidade");
 
@@ -119,12 +120,23 @@
         });
       });
 
-    // ===== DROPDOWNS =====
-    document.querySelectorAll(".dropdown-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        btn.parentElement.classList.toggle("active");
-      });
+// ===== DROPDOWNS (abre e fecha corretamente) =====
+document.querySelectorAll(".dropdown-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const parent = btn.parentElement;
+    const isActive = parent.classList.contains("active");
+
+    // Fecha todos os dropdowns
+    document.querySelectorAll(".dropdown").forEach(drop => {
+      drop.classList.remove("active");
     });
+
+    // Se o clicado estava fechado, abre
+    if (!isActive) {
+      parent.classList.add("active");
+    }
+  });
+});
 
     // ===== ÍCONES DE MARCADORES (azul UFU / verde Cidade) =====
     const blueIcon = new L.Icon({
