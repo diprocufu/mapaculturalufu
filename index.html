@@ -11,7 +11,7 @@
 </head>
 <body>
   <header>
-    <h1><i class="fa-solid fa-landmark"></i> Mapa Cultural UFU</h1>
+    <h1>Mapa Cultural UFU</h1>
   </header>
 
   <main>
@@ -29,6 +29,13 @@
       <div class="dropdown">
         <button class="dropdown-btn">🏙️ Espaços da Cidade</button>
         <div class="dropdown-content" id="espacos-cidade"></div>
+      </div>
+
+      <!-- Botão de cadastro -->
+      <div style="margin-top: 20px;">
+        <a href="https://forms.office.com/r/QnJH787q4F" target="_blank" class="btn-cadastro">
+          ✍️ Cadastrar novo espaço cultural
+        </a>
       </div>
     </aside>
   </main>
@@ -70,14 +77,15 @@
     // ===== FUNÇÃO: Ícone Font Awesome por tipo =====
     function faFor(tipo) {
       const t = (tipo || '').toLowerCase();
-      if (t.includes('museu')) return 'landmark';
-      if (t.includes('teatro')) return 'masks-theater';
+      if (t.includes('administr')) return 'building-columns';
+      if (t.includes('centro')) return 'building';
       if (t.includes('cinema')) return 'film';
       if (t.includes('curso')) return 'graduation-cap';
-      if (t.includes('centro')) return 'building';
+      if (t.includes('galeria')) return 'image';
+      if (t.includes('museu')) return 'landmark';
       if (t.includes('música') || t.includes('musica')) return 'music';
       if (t.includes('praça') || t.includes('praca')) return 'tree';
-      if (t.includes('administr')) return 'building-columns';
+      if (t.includes('teatro')) return 'masks-theater';
       return 'map-pin';
     }
 

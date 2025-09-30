@@ -394,6 +394,17 @@
       "telefone": "(34)3253-1204",
       "site": "",
       "email": ""
+    },
+    {
+      "nome": "Galeria Casa de Idéias",
+      "tipo": "galeria",
+      "latitude": -18.924344307277554,
+      "longitude": -48.27837359278158,
+      "endereco": "R. Javarí, 32 - Lídice, Uberlândia - MG,",
+      "categoria": "Cidade",
+      "telefone": "(34)3219-3662",
+      "site": "https://studiocasadeideias.com/",
+      "email": "studiocasadeideias@gmail.com"
     }
   ]
 }
