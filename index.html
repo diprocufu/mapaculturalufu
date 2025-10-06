@@ -15,7 +15,9 @@
   </header>
 
   <main>
-    <div id="map"></div>
+    <div id="map">
+    <button id="btn-localizacao">📍 Mostrar minha localização</button>
+    </div>
     <aside>
       <h2>Espaços Culturais</h2>
 
@@ -188,6 +190,43 @@ document.querySelectorAll(".dropdown-btn").forEach(btn => {
       return div;
     };
     fsButton.addTo(map);
+
+   // ===== ÍCONE DO USUÁRIO =====
+const userIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+let userMarker = null;
+
+document.getElementById("btn-localizacao").addEventListener("click", () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+
+        if (userMarker) {
+          map.removeLayer(userMarker);
+        }
+
+        userMarker = L.marker([lat, lng], { icon: userIcon }).addTo(map);
+        userMarker.bindPopup("📍 Você está aqui").openPopup();
+        map.setView([lat, lng], 16);
+      },
+      function (error) {
+        alert("Localização não ativada ou indisponível.");
+      }
+    );
+  } else {
+    alert("Geolocalização não suportada neste navegador.");
+  }
+});
+
   </script>
 </body>
 </html>
