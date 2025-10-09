@@ -109,7 +109,27 @@ const todosOsMarcadores = [];
     fetch('espacos.json?nocache=' + new Date().getTime())
       .then(response => response.json())
       .then(data => {
-        data.espacos.forEach(espaco => {
+        const ordemCampiUFU = [
+          "Santa Mônica",
+          "Umuarama",
+          "Educação Física",
+          "Glória",
+          "Ituiutaba",
+          "Monte Carmelo",
+          "Patos de Minas",
+          "Distribuídos por Uberlândia"
+        ];
+
+        data.espacos
+          .filter(e => e.tipo !== "separador")
+          .sort((a, b) => {
+          const ca = ordemCampiUFU.indexOf(a.campus || "");
+          const cb = ordemCampiUFU.indexOf(b.campus || "");
+          return (ca === -1 ? 999 : ca) - (cb === -1 ? 999 : cb);
+          })
+          .forEach(espaco => {
+        if (espaco.tipo === 'separador') return;
+          
           // Marcador no mapa
           const icon = (espaco.categoria && espaco.categoria.toLowerCase() === "ufu")
             ? blueIcon
@@ -136,9 +156,24 @@ marker.bindPopup(
 
           // Decide em qual lista (UFU ou Cidade)
           const categoria = (espaco.categoria || "").trim().toLowerCase();
-          const container = categoria === "ufu"
-            ? document.getElementById("espacos-ufu")
-            : document.getElementById("espacos-cidade");
+          let container;
+
+          if (categoria === "ufu") {
+            const campus = (espaco.campus || "Outro").trim();
+            const campusId = "ufu-" + campus.toLowerCase().replace(/\s/g, "-");
+
+          if (!document.getElementById(campusId)) {
+            const titulo = document.createElement("div");
+            titulo.id = campusId;
+            titulo.className = "menu-titulo";
+            titulo.innerHTML = `<strong>📍 ${campus}</strong>`;
+            document.getElementById("espacos-ufu").appendChild(titulo);
+          }
+
+          container = document.getElementById(campusId);
+        } else {
+          container = document.getElementById("espacos-cidade");
+        }
 
           // Item com ícone
           const item = document.createElement("a");
