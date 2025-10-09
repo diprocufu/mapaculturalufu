@@ -49,6 +49,17 @@
   <script>
     // ===== MAPA E CAMADAS BASE =====
     const map = L.map('map').setView([-18.9186, -48.255], 15);
+function calcularDistancia(lat1, lon1, lat2, lon2) {
+  const R = 6371; // raio da Terra em km
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c; // distância em km
+}
 
     const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
@@ -62,7 +73,8 @@
     });
 
     const esriSat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles © Esri'
+      attribution: 'Tiles © Esri',
+      maxZoom: 19
     });
 
     // Padrão: OSM
@@ -91,6 +103,8 @@
       return 'map-pin';
     }
 
+const todosOsMarcadores = [];
+
     // ===== CARREGA ESPAÇOS =====
     fetch('espacos.json?nocache=' + new Date().getTime())
       .then(response => response.json())
@@ -102,13 +116,23 @@
             : greenIcon;
 
           const marker = L.marker([espaco.latitude, espaco.longitude], { icon }).addTo(map);
+          todosOsMarcadores.push({ marker, espaco });
           const telefone = espaco.telefone ? `<br><b>Tel.:</b> ${espaco.telefone}` : '';
           const site = espaco.site ? `<br><a href="${espaco.site}" target="_blank">Site oficial</a>` : '';
           const email = espaco.email ? `<br><b>Email:</b> <a href="mailto:${espaco.email}">${espaco.email}</a>` : '';
 
-          marker.bindPopup(
-            `<b>${espaco.nome}</b><br>${espaco.endereco || ''}${telefone}${site}${email}`
-          );
+        let distanciaTexto = '';
+        if (userMarker) {
+          const userLat = userMarker.getLatLng().lat;
+          const userLng = userMarker.getLatLng().lng;
+          const dist = calcularDistancia(userLat, userLng, espaco.latitude, espaco.longitude);
+          distanciaTexto = `<br><b>Distância aproximada:</b> ${dist.toFixed(2)} km`;
+}
+
+marker.bindPopup(
+  `<b>${espaco.nome}</b><br>${espaco.endereco || ''}${telefone}${site}${email}${distanciaTexto}`
+);
+
 
           // Decide em qual lista (UFU ou Cidade)
           const categoria = (espaco.categoria || "").trim().toLowerCase();
@@ -215,17 +239,33 @@ document.getElementById("btn-localizacao").addEventListener("click", () => {
         }
 
         userMarker = L.marker([lat, lng], { icon: userIcon }).addTo(map);
+        todosOsMarcadores.forEach(({ marker, espaco }) => {
+          const telefone = espaco.telefone ? `<br><b>Tel.:</b> ${espaco.telefone}` : '';
+          const site = espaco.site ? `<br><a href="${espaco.site}" target="_blank">Site oficial</a>` : '';
+          const email = espaco.email ? `<br><b>Email:</b> <a href="mailto:${espaco.email}">${espaco.email}</a>` : '';
+
+          const userLat = userMarker.getLatLng().lat;
+          const userLng = userMarker.getLatLng().lng;
+          const dist = calcularDistancia(userLat, userLng, espaco.latitude, espaco.longitude);
+          const distanciaTexto = `<br><br><b>Distância aproximada:</b> ${dist.toFixed(2)} km`;
+
+          marker.bindPopup(
+         `<b>${espaco.nome}</b><br>${espaco.endereco || ''}${telefone}${site}${email}${distanciaTexto}`
+  );
+});
+
         userMarker.bindPopup("📍 Você está aqui").openPopup();
         map.setView([lat, lng], 16);
       },
       function (error) {
         alert(
-          "📍 Não foi possível acessar sua localização.\n\n" +
-          "Se estiver usando Safari no iPhone:\n" +
-          "→ Vá em Ajustes > Privacidade > Serviços de Localização > Sites do Safari\n" +
-          "→ Selecione 'Durante o uso do app'\n\n" +
-          "Depois disso, recarregue a página e clique novamente no botão."
+          "📍 Não foi possível acessar sua localização.\n" +
+          "→ Verifique se as permissões de localização estão ativadas para este navegador.\n" +
+          "→ Em computadores, libere o acesso nas configurações do navegador.\n" +
+          "→ Em celulares, ajuste as permissões de localização nas configurações do sistema.\n" +
+          "→ Depois disso, recarregue a página e clique novamente no botão."
 );
+
       }
     );
   } else {
