@@ -248,11 +248,11 @@
       "email": ""
     },
     {
-      "nome": "Auditório do Campus Umuarama",
+      "nome": "Auditório 2A do Campus Umuarama",
       "tipo": "teatro",
-      "latitude": -18.912000,
-      "longitude": -48.255500,
-      "endereco": "Av. Pará, 1720 - Campus Umuarama, Uberlândia - MG",
+      "latitude": -18.883842860678193,
+      "longitude": -48.259536231248966,
+      "endereco": "Av. Amazonas, 1777 - Campus Umuarama, Uberlândia - MG",
       "categoria": "UFU",
       "campus": "Umuarama",
       "telefone": "(34) 3225-1234",
@@ -262,8 +262,8 @@
     {
       "nome": "Ginásio Cultural da Educação Física",
       "tipo": "centro",
-      "latitude": -18.911000,
-      "longitude": -48.253000,
+      "latitude": -18.908075574223503,
+      "longitude": -48.26314224539245,
       "endereco": "Rua Benjamin Constant, 1286 - Bairro Aparecida, Uberlândia - MG",
       "categoria": "UFU",
       "campus": "Educação Física",
@@ -274,8 +274,8 @@
     {
       "nome": "Espaço Cultural do Campus Glória",
       "tipo": "centro",
-      "latitude": -18.936000,
-      "longitude": -48.245000,
+      "latitude": -18.943893527773017,
+      "longitude": -48.21406651896423,
       "endereco": "Rodovia BR-050, Km 78 - Campus Glória, Uberlândia - MG",
       "categoria": "UFU",
       "campus": "Glória",
