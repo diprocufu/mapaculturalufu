@@ -265,43 +265,48 @@ let userMarker = null;
 document.getElementById("btn-localizacao").addEventListener("click", () => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
-      function (position) {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
+  function (position) {
+    const lat = position.coords.latitude;
+    const lng = position.coords.longitude;
+    const precisao = position.coords.accuracy;
 
-        if (userMarker) {
-          map.removeLayer(userMarker);
-        }
+    if (userMarker) {
+      map.removeLayer(userMarker);
+    }
 
-        userMarker = L.marker([lat, lng], { icon: userIcon }).addTo(map);
-        todosOsMarcadores.forEach(({ marker, espaco }) => {
-          const telefone = espaco.telefone ? `<br><b>Tel.:</b> ${espaco.telefone}` : '';
-          const site = espaco.site ? `<br><a href="${espaco.site}" target="_blank">Site oficial</a>` : '';
-          const email = espaco.email ? `<br><b>Email:</b> <a href="mailto:${espaco.email}">${espaco.email}</a>` : '';
+    userMarker = L.marker([lat, lng], { icon: userIcon }).addTo(map);
+    todosOsMarcadores.forEach(({ marker, espaco }) => {
+      const telefone = espaco.telefone ? `<br><b>Tel.:</b> ${espaco.telefone}` : '';
+      const site = espaco.site ? `<br><a href="${espaco.site}" target="_blank">Site oficial</a>` : '';
+      const email = espaco.email ? `<br><b>Email:</b> <a href="mailto:${espaco.email}">${espaco.email}</a>` : '';
 
-          const userLat = userMarker.getLatLng().lat;
-          const userLng = userMarker.getLatLng().lng;
-          const dist = calcularDistancia(userLat, userLng, espaco.latitude, espaco.longitude);
-          const distanciaTexto = `<br><br><b>Distância aproximada:</b> ${dist.toFixed(2)} km`;
+      const userLat = userMarker.getLatLng().lat;
+      const userLng = userMarker.getLatLng().lng;
+      const dist = calcularDistancia(userLat, userLng, espaco.latitude, espaco.longitude);
+      const distanciaTexto = `<br><br><b>Distância aproximada:</b> ${dist.toFixed(2)} km`;
 
-          marker.bindPopup(
-         `<b>${espaco.nome}</b><br>${espaco.endereco || ''}${telefone}${site}${email}${distanciaTexto}`
-  );
-});
+      marker.bindPopup(
+        `<b>${espaco.nome}</b><br>${espaco.endereco || ''}${telefone}${site}${email}${distanciaTexto}`
+      );
+    });
 
-        userMarker.bindPopup("📍 Você está aqui").openPopup();
-        map.setView([lat, lng], 16);
-      },
-      function (error) {
-        alert(
-          "📍 Não foi possível acessar sua localização.\n" +
-          "→ Verifique se as permissões de localização estão ativadas para este navegador.\n" +
-          "→ Em computadores, libere o acesso nas configurações do navegador.\n" +
-          "→ Em celulares, ajuste as permissões de localização nas configurações do sistema.\n" +
-          "→ Depois disso, recarregue a página e clique novamente no botão."
-);
-
-      }
+    userMarker.bindPopup(`📍 Você está aqui<br><small>Precisão estimada: ${precisao.toFixed(0)} metros</small>`).openPopup();
+    map.setView([lat, lng], 16);
+  },
+  function (error) {
+    alert(
+      "📍 Não foi possível acessar sua localização.\n" +
+      "→ Verifique se as permissões de localização estão ativadas para este navegador.\n" +
+      "→ Em computadores, libere o acesso nas configurações do navegador.\n" +
+      "→ Em celulares, ajuste as permissões de localização nas configurações do sistema.\n" +
+      "→ Depois disso, recarregue a página e clique novamente no botão."
+    );
+  },
+  {
+    enableHighAccuracy: true,
+    timeout: 10000,
+    maximumAge: 0
+  }
     );
   } else {
     alert("Geolocalização não suportada neste navegador.");
