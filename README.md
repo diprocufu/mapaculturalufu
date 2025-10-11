@@ -16,8 +16,11 @@ Este projeto apresenta um mapa interativo dos espaços culturais da Universidade
 ## 📱 Responsivo
 Compatível com computadores, tablets e celulares. Os menus são adaptados para facilitar a navegação em qualquer dispositivo.
 
+🌐 **Acesse o mapa online:**  
+[Mapa Cultural UFU](https://diprocufu.github.io/mapaculturalufu/)
+
 ## 👨‍💻 Desenvolvido por
-André C. Machado  
+Dr. André Campos Machado  
 DIPROC / DICULT / PROEXC - UFU  
 Com apoio de inteligência artificial
 
