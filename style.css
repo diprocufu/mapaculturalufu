@@ -117,18 +117,18 @@ aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
 
 /* 🎭 Privados */
 aside .dropdown:nth-of-type(3) .dropdown-btn {
-  background: #16a085;
+  background: #e74c3c; /* vermelho */
 }
 aside .dropdown:nth-of-type(3) .dropdown-btn:hover {
-  background: #117a65;
+  background: #c0392b;
 }
 
 /* 🌱 Ponto de Cultura */
 aside .dropdown:nth-of-type(4) .dropdown-btn {
-  background: #2ecc71;
+  background: #9b59b6; /* roxo */
 }
 aside .dropdown:nth-of-type(4) .dropdown-btn:hover {
-  background: #27ae60;
+  background: #8e44ad;
 }
 
 /* 🔽 Conteúdo do menu */
@@ -277,4 +277,13 @@ aside .dropdown:nth-of-type(4) .dropdown-btn:hover {
   footer {
     font-size: 12px;
   }
+  .sobre-icone {
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.sobre-icone:hover {
+  color: #3498db; /* azul UFU para destacar no hover */
+}
 }
