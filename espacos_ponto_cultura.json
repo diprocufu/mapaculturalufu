@@ -1,0 +1,16 @@
+{
+  "espacos": [                           
+    {
+      "nome": "Ponto dos Truões",
+      "tipo": "teatro",
+      "latitude": -18.919399712611096,
+      "longitude": -48.25148504812082,
+      "endereco": "Av. Ana Godoy De Sousa, 381 - Santa Mônica, Uberlândia - MG",
+      "categoria": "Cidade",
+      "tipo": "Ponto de Cultura",
+      "telefone": "(34)3237-9440",
+      "site": "http://www.trupedetruoes.com.br/",
+      "email": "trupedetruoes@gmail.com / contatotruoes@gmail.com"
+    }
+  ]
+}

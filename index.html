@@ -13,7 +13,6 @@
   <header>
     <h1>Mapa Cultural UFU</h1>
   </header>
-
   <main>
     <div id="map">
     <button id="btn-localizacao">📍 Mostrar minha localização</button>
@@ -27,10 +26,22 @@
         <div class="dropdown-content" id="espacos-ufu"></div>
       </div>
 
-      <!-- Dropdown Cidade -->
+      <!-- Dropdown Públicos -->
       <div class="dropdown">
-        <button class="dropdown-btn">🏙️ Espaços da Cidade</button>
-        <div class="dropdown-content" id="espacos-cidade"></div>
+        <button class="dropdown-btn" onclick="carregarCidade('Público')">🏛️ Espaços Públicos</button>
+        <div class="dropdown-content" id="espacos-publicos"></div>
+      </div>
+
+      <!-- Dropdown Privados -->
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="carregarCidade('Privado')">🎭 Espaços Privados</button>
+        <div class="dropdown-content" id="espacos-privados"></div>
+      </div>
+
+      <!-- Dropdown Ponto de Cultura -->
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="carregarCidade('Ponto de Cultura')">🌱 Pontos de Cultura</button>
+        <div class="dropdown-content" id="espacos-ponto"></div>
       </div>
 
       <!-- Botão de cadastro -->
@@ -313,6 +324,52 @@ document.getElementById("btn-localizacao").addEventListener("click", () => {
   }
 });
 
+function carregarCidade(tipo) {
+  let arquivo = "";
+  let containerId = "";
+
+  if (tipo === "Público") {
+    arquivo = "espacos_publicos.json";
+    containerId = "espacos-publicos";
+  } else if (tipo === "Privado") {
+    arquivo = "espacos_privados.json";
+    containerId = "espacos-privados";
+  } else if (tipo === "Ponto de Cultura") {
+    arquivo = "espacos_ponto_cultura.json";
+    containerId = "espacos-ponto";
+  }
+
+  fetch(arquivo + '?nocache=' + new Date().getTime())
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById(containerId);
+      container.innerHTML = ""; // limpa antes de carregar
+
+      data.espacos.forEach(espaco => {
+        const iconName = faFor(espaco.tipo);
+        const marker = L.marker([espaco.latitude, espaco.longitude], { icon: greenIcon }).addTo(map);
+        todosOsMarcadores.push({ marker, espaco });
+
+        const telefone = espaco.telefone ? `<br><b>Tel.:</b> ${espaco.telefone}` : '';
+        const site = espaco.site ? `<br><a href="${espaco.site}" target="_blank">Site oficial</a>` : '';
+        const email = espaco.email ? `<br><b>Email:</b> <a href="mailto:${espaco.email}">${espaco.email}</a>` : '';
+
+        marker.bindPopup(
+          `<b>${espaco.nome}</b><br>${espaco.endereco || ''}${telefone}${site}${email}`
+        );
+
+        const item = document.createElement("a");
+        item.href = "#";
+        item.innerHTML = `<i class="fa-solid fa-${iconName}"></i> ${espaco.nome}`;
+        item.onclick = () => {
+          map.setView([espaco.latitude, espaco.longitude], 18);
+          marker.openPopup();
+        };
+
+        container.appendChild(item);
+      });
+    });
+}
   </script>
 </body>
 </html>

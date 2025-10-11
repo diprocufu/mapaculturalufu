@@ -1,0 +1,51 @@
+{
+  "espacos": [                          
+    {
+      "nome": "Museu de Arte Sacra da Diocese de Uberlândia",
+      "tipo": "museu",
+      "latitude": -18.924305192692078,
+      "longitude": -48.28250280665032,
+      "endereco": "Praça Dr. Duarte - Fundinho",
+      "categoria": "Cidade",
+      "tipo": "Privado",
+      "telefone": "(34) 996870-4655",
+      "site": ""
+    },
+    {
+      "nome": "Palco de Arte - UAI Q Dança",
+      "tipo": "teatro",
+      "latitude": -18.923686005295522,
+      "longitude": -48.28410137063889,
+      "endereco": "Rua Coronel Manoel Alves, 22, bairro Fundinho",
+      "categoria": "Cidade",
+      "tipo": "Privado",
+      "telefone": "(34)99698-2956",
+      "site": "http://uaiqdanca.com.br/",
+      "email": "uaiqdanca@gmail.com"
+    },
+    {
+      "nome": "Teatro do Grupontapé",
+      "tipo": "teatro",
+      "latitude": -18.9098593046293,
+      "longitude": -48.27028287116448,
+      "endereco": "R. Tupaciguara, 471, Uberlândia - MG",
+      "categoria": "Cidade",
+      "tipo": "Privado",
+      "telefone": "(34)3213-1325",
+      "site": "https://www.grupontape.com.br/",
+      "email": "rubemreis@balaiodocerrado.com.br / marisa@grupontape.com.br"
+    },
+    {
+      "nome": "Galeria Casa de Idéias",
+      "tipo": "galeria",
+      "latitude": -18.924344307277554,
+      "longitude": -48.27837359278158,
+      "endereco": "R. Javarí, 32 - Lídice, Uberlândia - MG,",
+      "categoria": "Cidade",
+      "tipo": "Privado",
+      "telefone": "(34)3219-3662",
+      "site": "https://studiocasadeideias.com/",
+      "email": "studiocasadeideias@gmail.com"
+    }
+  ]
+}

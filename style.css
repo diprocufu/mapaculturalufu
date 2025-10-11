@@ -107,12 +107,28 @@ aside .dropdown:nth-of-type(1) .dropdown-btn:hover {
   background: #2980b9;
 }
 
-/* 🏙️ Cidade */
+/* 🏛️ Públicos */
 aside .dropdown:nth-of-type(2) .dropdown-btn {
   background: #27ae60;
 }
 aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
   background: #1e8449;
+}
+
+/* 🎭 Privados */
+aside .dropdown:nth-of-type(3) .dropdown-btn {
+  background: #16a085;
+}
+aside .dropdown:nth-of-type(3) .dropdown-btn:hover {
+  background: #117a65;
+}
+
+/* 🌱 Ponto de Cultura */
+aside .dropdown:nth-of-type(4) .dropdown-btn {
+  background: #2ecc71;
+}
+aside .dropdown:nth-of-type(4) .dropdown-btn:hover {
+  background: #27ae60;
 }
 
 /* 🔽 Conteúdo do menu */

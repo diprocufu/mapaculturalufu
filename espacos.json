@@ -15,6 +15,7 @@
       "endereco": "Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3291-8902",
       "site": "https://prefe.ufu.br/espacos-fisicos/campus-santa-monica/ccsm-centro-de-convivencia-santa-monica",
       "email": "espacofisico@prefe.ufu.br"
@@ -27,6 +28,7 @@
       "endereco": "Avenida Cesário Crosara, 4187",
       "categoria": "UFU",
       "campus": "Distribuídos por Uberlândia",
+      "tipo": "Público",
       "telefone": "(34) 3231-3454",
       "site": "https://proexc.ufu.br/unidades-organizacionais/casa-de-cultura-graca-do-ache",
       "email": "gracadoache@proex.ufu.br"
@@ -39,6 +41,7 @@
       "endereco": "Bloco 3C, Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3291-8942 / (34) 3291-8943 / (34) 3291-8944",
       "site": "https://proexc.ufu.br/unidades-organizacionais/cinema-ufu",
       "email": ""
@@ -51,6 +54,7 @@
       "endereco": "Rua Duque de Caxias, 285",
       "categoria": "UFU",
       "campus": "Distribuídos por Uberlândia",
+      "tipo": "Público",
       "telefone": "(34) 3291-8942 / (34) 3291-8943 / (34) 3291-8944",
       "site": "https://proexc.ufu.br/servico/coral-da-ufu",
       "email": ""
@@ -63,6 +67,7 @@
       "endereco": "Bloco 1I, Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3239-4244",
       "site": "https://www.iarte.ufu.br/artes-visuais",
       "email": "coart@ufu.br"
@@ -75,6 +80,7 @@
       "endereco": "Bloco 5U, Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3230-9514",
       "site": "https://www.iarte.ufu.br/danca",
       "email": "codan@demac.ufu.br"
@@ -87,6 +93,7 @@
       "endereco": "Bloco 3M, Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3239-4214",
       "site": "https://www.iarte.ufu.br/musica",
       "email": "coorden@demac.ufu.br"
@@ -99,6 +106,7 @@
       "endereco": "Bloco 3M, Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3239-4413",
       "site": "https://www.iarte.ufu.br/teatro",
       "email": "teatro@iarte.ufu.br"
@@ -111,6 +119,7 @@
       "endereco": "Bloco 3P - Reitoria - Sala 106 - Reitoria",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3291-8947",
       "site": "https://proexc.ufu.br/dicult",
       "email": "cultura@proex.ufu.br"
@@ -123,6 +132,7 @@
       "endereco": "Bloco 3P - Reitoria - Sala 106 - Reitoria",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3291-8941 / (34) 3291-8945",
       "site": "https://proexc.ufu.br/servicos/fomento-cultura",
       "email": "difoc@proex.ufu.br"
@@ -135,6 +145,7 @@
       "endereco": "Bloco 3P - Reitoria - Sala 104 - Reitoria",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3291-8942 / (34) 3291-8943 / (34) 3291-8944",
       "site": "https://proexc.ufu.br/unidades-organizacionais/divisao-de-promocao-cultural",
       "email": "diproc@proex.ufu.br"
@@ -147,6 +158,7 @@
       "endereco": "Bloco 3E, Sala 130, Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3239-4424",
       "site": "https://www.iarte.ufu.br/",
       "email": "secretaria@iarte.ufu.br"
@@ -159,6 +171,7 @@
       "endereco": "Campus Santa Mônica entre os blocos 1S e 3E",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "34) 3291-8942 / (34) 3291-8943 / (34) 3291-8944",
       "site": "https://proexc.ufu.br/servico/lona-cultural",
       "email": "lonacultural@proex.ufu.br"
@@ -171,6 +184,7 @@
       "endereco": "Rua Duque de Caxias, 285",
       "categoria": "UFU",
       "campus": "Distribuídos por Uberlândia",
+      "tipo": "Público",
       "telefone": "",
       "site": "https://proexc.ufu.br/unidades-organizacionais/museu-de-antropologia-e-arqueologia",
       "email": ""
@@ -183,6 +197,7 @@
       "endereco": "Bloco 1Q, Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3239-4229",
       "site": "https://igesc.ufu.br/unidades/museu/museu-de-minerais-e-rochas",
       "email": ""
@@ -195,6 +210,7 @@
       "endereco": "Av. Paulo Gracindo, 950 - Gávea",
       "categoria": "UFU",
       "campus": "Distribuídos por Uberlândia",
+      "tipo": "Público",
       "telefone": "(34) 3230-9517",
       "site": "https://www.dicaufu.com.br/",
       "email": "useudica@infis.ufu.br"
@@ -207,6 +223,7 @@
       "endereco": "Rua Duque de Caxias, 285",
       "categoria": "UFU",
       "campus": "Distribuídos por Uberlândia",
+      "tipo": "Público",
       "telefone": "(34) 3236-3707",
       "site": "https://proexc.ufu.br/unidades-organizacionais/museu-dos-povos-indigenas",
       "email": "musindio@ufu.br"
@@ -219,6 +236,7 @@
       "endereco": "Pr. Cícero Macedo, 309 - Fundinho",
       "categoria": "UFU",
       "campus": "Distribuídos por Uberlândia",
+      "tipo": "Público",
       "telefone": "(34) 3231-9121",
       "site": "http://www.muna.ufu.br/",
       "email": "secretaria@muna.ufu.br"
@@ -231,6 +249,7 @@
       "endereco": "Campus Santa Mônica em frente ao bloco J",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3291-8902",
       "site": "https://prefe.ufu.br/espacos-fisicos/campus-santa-monica/outros-locais",
       "email": "espacofisico@prefe.ufu.br"
@@ -243,6 +262,7 @@
       "endereco": "Bloco 5R, Campus Santa Mônica",
       "categoria": "UFU",
       "campus": "Santa Mônica",
+      "tipo": "Público",
       "telefone": "(34) 3291-8942 / (34) 3291-8943 / (34) 3291-8944",
       "site": "https://proexc.ufu.br/unidades-organizacionais/teatro-ufu",
       "email": ""
@@ -255,6 +275,7 @@
       "endereco": "Av. Amazonas, 1777 - Campus Umuarama, Uberlândia - MG",
       "categoria": "UFU",
       "campus": "Umuarama",
+      "tipo": "Público",
       "telefone": "(34) 3225-1234",
       "site": "",
       "email": "auditorio.umuarama@ufu.br"
@@ -267,6 +288,7 @@
       "endereco": "Rua Benjamin Constant, 1286 - Bairro Aparecida, Uberlândia - MG",
       "categoria": "UFU",
       "campus": "Educação Física",
+      "tipo": "Público",
       "telefone": "(34) 3225-5678",
       "site": "",
       "email": "cultura.edfisica@ufu.br"
@@ -279,6 +301,7 @@
       "endereco": "Rodovia BR-050, Km 78 - Campus Glória, Uberlândia - MG",
       "categoria": "UFU",
       "campus": "Glória",
+      "tipo": "Público",
       "telefone": "(34) 3225-7890",
       "site": "",
       "email": "cultura.gloria@ufu.br"
@@ -291,6 +314,7 @@
       "endereco": "Av. Amazonas, 795 - Bairro Universitário, Ituiutaba - MG",
       "categoria": "UFU",
       "campus": "Ituiutaba",
+      "tipo": "Público",
       "telefone": "(34) 3201-1234",
       "site": "",
       "email": "auditorio.ituiutaba@ufu.br"
@@ -303,6 +327,7 @@
       "endereco": "Rua das Palmeiras, 100 - Monte Carmelo - MG",
       "categoria": "UFU",
       "campus": "Monte Carmelo",
+      "tipo": "Público",
       "telefone": "(34) 3202-5678",
       "site": "",
       "email": "cultura.montecarmelo@ufu.br"
@@ -315,202 +340,10 @@
       "endereco": "Av. Universitária, 250 - Patos de Minas - MG",
       "categoria": "UFU",
       "campus": "Patos de Minas",
+      "tipo": "Público",
       "telefone": "(34) 3203-7890",
       "site": "",
       "email": "cultura.patos@ufu.br"
-    },
-    {
-      "nome": "=== ESPAÇOS DA CIDADE ===",
-      "tipo": "separador",
-      "latitude": 0,
-      "longitude": 0,
-      "categoria": "Cidade"
-    },                           
-    {
-      "nome": "Conservatório Estadual de Música Cora Pavan Capparelli",
-      "tipo": "música",
-      "latitude": -18.899704161857432,
-      "longitude": -48.26338607707621,
-      "endereco": "R. Osório José da Cunha, 685",
-      "categoria": "Cidade",
-      "telefone": "(34) 3232-1063",
-      "site": "https://www.conservatoriouberlandia.com.br/",
-      "email": "escola.167452.secretaria@educacao.mg.gov.br"
-    },
-    {
-      "nome": "Escola Municipal Cidade da Música",
-      "tipo": "música",
-      "latitude": -18.946212724113373,
-      "longitude": -48.3018102978366,
-      "endereco": "R. das Juritis, 1315",
-      "categoria": "Cidade",
-      "telefone": "(34) 3219-9323",
-      "site": "https://www.uberlandia.mg.gov.br/inscricao-escolar/escola-municipal-cidade-da-musica/",
-      "email": "cidadedamusica@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Museu de Arte Sacra da Diocese de Uberlândia",
-      "tipo": "museu",
-      "latitude": -18.924305192692078,
-      "longitude": -48.28250280665032,
-      "endereco": "Praça Dr. Duarte - Fundinho",
-      "categoria": "Cidade",
-      "telefone": "(34) 996870-4655",
-      "site": ""
-    },
-    {
-      "nome": "Museu Municipal de Uberlândia",
-      "tipo": "museu",
-      "latitude": -18.923288139132925,
-      "longitude": -48.281531717441446,
-      "endereco": "Praça Clarimundo Carneiro, 67 - Centro",
-      "categoria": "Cidade",
-      "telefone": "(034) 3214-0068",
-      "site": "https://www.uberlandia.mg.gov.br/tags/museu-municipal/",
-      "email": "museumunicipal@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Coreto Municipal",
-      "tipo": "praça",
-      "latitude": -18.9236416511344,
-      "longitude": -48.281639580375206,
-      "endereco": "Praça Clarimundo Carneiro, 67 - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3236-8011",
-      "site": "https://www.uberlandia.mg.gov.br/prefeitura/secretarias/cultura-e-turismo/",
-      "email": "secretariamunicipaldecultura@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Centro Municipal de Cultura",
-      "tipo": "centro",
-      "latitude": -18.915957011739415,
-      "longitude": -48.2750693869828,
-      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3236-8011",
-      "site": "https://www.uberlandia.mg.gov.br/prefeitura/secretarias/cultura-e-turismo/",
-      "email": "secretariamunicipaldecultura@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Oficina Cultural de Uberlândia",
-      "tipo": "centro",
-      "latitude": -18.92342003606663,
-      "longitude": -48.282240388386214,
-      "endereco": "Praça Clarimundo Carneiro, 204 - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3214-9889 / (34) 3231-8608",
-      "site": "",
-      "email": "oficinacultural@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Casa da Cultura de Uberlândia",
-      "tipo": "centro",
-      "latitude": -18.924113136959885,
-      "longitude": -48.2854482827609,
-      "endereco": "Praça Cel. Carneiro, 89 - Fundinho",
-      "categoria": "Cidade",
-      "telefone": "(34) 3255-8252",
-      "site": "",
-      "email": "casadacultura@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Cine Teatro Nininha Rocha",
-      "tipo": "teatro",
-      "latitude": -18.915957011739415,
-      "longitude": -48.2750693869828,
-      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3235-9182",
-      "site": "",
-      "email": "cineteatronininharocha@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Banda Sinfônica Municipal",
-      "tipo": "música",
-      "latitude": -18.915957011739415,
-      "longitude": -48.2750693869828,
-      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3236-8011",
-      "site": "",
-      "email": "bandamunicipal@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Teatro de Bolso do Mercado Municipal",
-      "tipo": "teatro",
-      "latitude": -18.918373508457336,
-      "longitude": -48.2819195058515,
-      "endereco": "R. Olegário Maciel, 255 - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3235-7790",
-      "site": "",
-      "email": "cultmercado@uberlandia.mg.gov.br"
-    },
-    {
-      "nome": "Teatro Municipal de Uberlândia",
-      "tipo": "teatro",
-      "latitude": -18.895383627796797,
-      "longitude": -48.25272889612306,
-      "endereco": "Av. Rondon Pacheco, 7070 - Tibery",
-      "categoria": "Cidade",
-      "telefone": "(34) 3235-1568",
-      "site": "",
-      "email": "teatromunicipaluberlandia@gmail.com"
-    },
-    {
-      "nome": "Palco de Arte - UAI Q Dança",
-      "tipo": "teatro",
-      "latitude": -18.923686005295522,
-      "longitude": -48.28410137063889,
-      "endereco": "Rua Coronel Manoel Alves, 22, bairro Fundinho",
-      "categoria": "Cidade",
-      "telefone": "(34)99698-2956",
-      "site": "http://uaiqdanca.com.br/",
-      "email": "uaiqdanca@gmail.com"
-    },
-    {
-      "nome": "Teatro do Grupontapé",
-      "tipo": "teatro",
-      "latitude": -18.9098593046293,
-      "longitude": -48.27028287116448,
-      "endereco": "R. Tupaciguara, 471, Uberlândia - MG",
-      "categoria": "Cidade",
-      "telefone": "(34)3213-1325",
-      "site": "https://www.grupontape.com.br/",
-      "email": "rubemreis@balaiodocerrado.com.br / marisa@grupontape.com.br"
-    },
-    {
-      "nome": "Ponto dos Truões",
-      "tipo": "teatro",
-      "latitude": -18.919399712611096,
-      "longitude": -48.25148504812082,
-      "endereco": "Av. Ana Godoy De Sousa, 381 - Santa Mônica, Uberlândia - MG",
-      "categoria": "Cidade",
-      "telefone": "(34)3237-9440",
-      "site": "http://www.trupedetruoes.com.br/",
-      "email": "trupedetruoes@gmail.com / contatotruoes@gmail.com"
-    },
-    {
-      "nome": "CEU Shopping Park",
-      "tipo": "teatro",
-      "latitude": -18.99080027147741,
-      "longitude": -48.26741416931792,
-      "endereco": "R. Juvenília Mota Leite, 700 - Shopping Park, Uberlândia - MG",
-      "categoria": "Cidade",
-      "telefone": "(34)3253-1204",
-      "site": "",
-      "email": ""
-    },
-    {
-      "nome": "Galeria Casa de Idéias",
-      "tipo": "galeria",
-      "latitude": -18.924344307277554,
-      "longitude": -48.27837359278158,
-      "endereco": "R. Javarí, 32 - Lídice, Uberlândia - MG,",
-      "categoria": "Cidade",
-      "telefone": "(34)3219-3662",
-      "site": "https://studiocasadeideias.com/",
-      "email": "studiocasadeideias@gmail.com"
     }
   ]
 }
