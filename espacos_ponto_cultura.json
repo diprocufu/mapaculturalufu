@@ -1,7 +1,19 @@
 {
   "espacos": [                           
     {
-      "nome": "Ponto dos Truões",
+      "nome": "Instituto Circo da Vida",
+      "tipo": "centro",
+      "latitude": -18.897013545128743,
+      "longitude": -48.28262012065498,
+      "endereco": "Rua Doutor Leopoldo de Castro, 400, Uberlândia - MG",
+      "categoria": "Cidade",
+      "tipo": "Ponto de Cultura",
+      "telefone": "(34) 3219-9477",
+      "site": "www.circodavida.org",
+      "email": "Institutocircodavida@gmail.com"
+    },
+    {
+      "nome": "Trupe de Truões",
       "tipo": "teatro",
       "latitude": -18.919399712611096,
       "longitude": -48.25148504812082,
