@@ -51,5 +51,5 @@ A UFU está expressamente autorizada a utilizar, adaptar e divulgar este projeto
 
 ## 💬 Contato
 
-📧 andre.machado@ufu.br  
+📧 andrecampos@ufu.br  
 🏛️ Universidade Federal de Uberlândia (UFU)
