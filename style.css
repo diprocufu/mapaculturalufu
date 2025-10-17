@@ -249,6 +249,20 @@ aside .dropdown:nth-of-type(4) .dropdown-btn:hover {
 }
 
 /* ===================================================
+   🔢 CONTADOR DE VISITAS
+=================================================== */
+.visit-counter {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.visit-counter img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* ===================================================
    📱 RESPONSIVIDADE
 =================================================== */
 @media (max-width: 768px) {
