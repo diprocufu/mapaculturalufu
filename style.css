@@ -252,10 +252,11 @@ aside .dropdown:nth-of-type(4) .dropdown-btn:hover {
    🔢 CONTADOR DE VISITAS
 =================================================== */
 .visit-counter {
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
   margin-bottom: 10px;
   opacity: 0.8;
+  padding-left: 4px; /* opcional, para dar um respiro da borda */
 }
 .visit-counter img {
   max-width: 120px;
