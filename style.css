@@ -56,7 +56,35 @@ footer {
     font-size: 12px;
   }
 }
+@media (max-width: 600px) {
+  /* 1️⃣ Reduz o espaço vertical do cabeçalho sem alterar a fonte */
+  header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
 
+  /* 2️⃣ Reduz o espaçamento acima dos menus de espaços culturais */
+  aside {
+    padding-top: 6px;
+  }
+
+  /* 3️⃣ Aumenta a altura do mapa e empurra os menus para baixo */
+  #map {
+    height: 70vh;
+  }
+
+  .dropdown {
+    margin-top: 8px;
+  }
+  
+  .btn-cadastro {
+    margin-top: 8px;
+  }
+
+  .visit-counter {
+    margin-top: 6px;
+  }
+}
 
 /* ===================================================
    🔲 BOTÃO TELA CHEIA
