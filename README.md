@@ -39,7 +39,7 @@ Com apoio de inteligência artificial
 
 ## ✍️ Autoria e Licença
 
-Este projeto é de autoria de **André C. Machado**, vinculado à Universidade Federal de Uberlândia (UFU).
+Este projeto é de autoria de **André Campos Machado**, vinculado à Universidade Federal de Uberlândia (UFU).
 
 Está licenciado sob a [Creative Commons Atribuição-NãoComercial 4.0 Internacional (CC BY-NC 4.0)](http://creativecommons.org/licenses/by-nc/4.0/).
 
