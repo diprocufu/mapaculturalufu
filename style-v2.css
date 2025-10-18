@@ -6,7 +6,7 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header {
@@ -19,27 +19,28 @@ header {
 
 main {
   display: flex;
-  flex: 1;
-  overflow: visible; /* ✅ permite que menus flutuem corretamente */
+  flex-grow: 1;
+  min-height: 0;
 }
 
 #map {
-  flex: 3;
-  height: 100%;
+  position: relative;
+  flex-grow: 3;
+  min-height: 400px;
 }
 
 aside {
   flex: 1;
   background: #ecf0f1;
   padding: 10px;
-  padding-bottom: 40px;           /* ✅ espaço extra para menus no celular */
-  scroll-padding-top: 60px;       /* ✅ facilita retorno ao botão no celular */
-  overflow: visible;              /* ✅ libera menus flutuantes */
+  padding-bottom: 40px;
+  scroll-padding-top: 60px;
+  overflow: visible;
   -webkit-overflow-scrolling: touch;
   max-height: 100vh;
   box-sizing: border-box;
-  position: relative;             /* ✅ necessário para menus absolutos */
-  z-index: 1000;                  /* ✅ garante que menus fiquem acima do mapa */
+  position: relative;
+  z-index: 1000;
 }
 
 footer {
@@ -49,41 +50,40 @@ footer {
   padding: 8px;
   font-size: 14px;
   line-height: 1.4;
-  opacity: 0.9; /* opcional: suaviza o tom */
+  opacity: 0.9;
 }
-@media (max-width: 768px) {
-  footer {
-    font-size: 12px;
-  }
+
+/* ===================================================
+   📍 BOTÃO LOCALIZAÇÃO DO USUÁRIO
+=================================================== */
+#btn-localizacao {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-@media (max-width: 600px) {
-  /* 1️⃣ Reduz o espaço vertical do cabeçalho sem alterar a fonte */
-  header {
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
 
-  /* 2️⃣ Reduz o espaçamento acima dos menus de espaços culturais */
-  aside {
-    padding-top: 6px;
-  }
+/* ===================================================
+   🔢 CONTADOR DE VISITAS
+=================================================== */
+.visit-counter {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  padding-left: 4px;
+}
 
-  /* 3️⃣ Aumenta a altura do mapa e empurra os menus para baixo */
-  #map {
-    height: 70vh;
-  }
-
-  .dropdown {
-    margin-top: 8px;
-  }
-  
-  .btn-cadastro {
-    margin-top: 8px;
-  }
-
-  .visit-counter {
-    margin-top: 6px;
-  }
+.visit-counter img {
+  max-width: 120px;
+  height: auto;
 }
 
 /* ===================================================
@@ -103,10 +103,10 @@ footer {
   display: grid;
   place-items: center;
 }
+
 .btn-fullscreen:hover {
   background: rgba(255,255,255,0.25);
 }
-
 
 /* ===================================================
    📂 DROPDOWN MENUS
@@ -127,7 +127,6 @@ footer {
   color: white;
 }
 
-/* 🎓 UFU */
 .ufubtn .dropdown-btn {
   background: #3498db;
 }
@@ -156,7 +155,6 @@ footer {
   background: #8e44ad;
 }
 
-/* 🔽 Conteúdo do menu */
 .dropdown-content {
   position: absolute;
   top: 100%;
@@ -168,7 +166,6 @@ footer {
   border: 1px solid #ddd;
   margin-top: 5px;
   border-radius: 4px;
-
   max-height: 300px;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -194,25 +191,15 @@ footer {
   display: flex;
 }
 
-/* 📍 TÍTULOS DE CAMPUS DENTRO DO MENU UFU */
 .menu-titulo {
   padding: 6px 10px;
   background-color: #f0f0f0;
   font-weight: bold;
   border-top: 1px solid #ccc;
-  margin: 8px 0 4px 0; /* top, right, bottom, left */
+  margin: 8px 0 4px 0;
   font-size: 14px;
   color: #2c3e50;
 }
-
-/* ===================================================
-   🗺️ LEAFLET MAP
-=================================================== */
-.leaflet-container {
-  width: 100%;
-  height: 100%;
-}
-
 
 /* ===================================================
    🎨 ÍCONES NO MENU
@@ -221,7 +208,6 @@ footer {
   margin-right: 6px;
   color: #2c3e50;
 }
-
 
 /* ===================================================
    🏷️ RÓTULOS FUTUROS (opcional)
@@ -252,40 +238,9 @@ footer {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 .btn-cadastro:hover {
   background: #732d91;
-}
-
-/* ===================================================
-   📍 BOTÃO LOCALIZAÇÃO DO USUÁRIO
-=================================================== */
-#btn-localizacao {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 1000;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* ===================================================
-   🔢 CONTADOR DE VISITAS
-=================================================== */
-.visit-counter {
-  text-align: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  opacity: 0.8;
-  padding-left: 4px; /* opcional, para dar um respiro da borda */
-}
-.visit-counter img {
-  max-width: 120px;
-  height: auto;
 }
 
 /* ===================================================
@@ -317,13 +272,66 @@ footer {
   footer {
     font-size: 12px;
   }
+
   .sobre-icone {
-  margin-left: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  vertical-align: middle;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .sobre-icone:hover {
+    color: #3498db;
+  }
 }
-.sobre-icone:hover {
-  color: #3498db; /* azul UFU para destacar no hover */
+
+@media (max-width: 600px) {
+  header {
+    padding: 6px 12px;
+    font-size: 17px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  aside {
+    padding-top: 4px;
+    max-height: none;
+    overflow-y: auto;
+  }
+
+  aside h2 {
+    margin-top: 6px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #map {
+    height: 85vh;
+  }
+
+  .dropdown {
+    margin-top: 8px;
+  }
+
+  .dropdown-btn {
+    font-size: 15px;
+  }
+
+  .btn-cadastro {
+    margin-top: 8px;
+    font-size: 15px;
+  }
+
+  .visit-counter {
+    margin-top: 6px;
+  }
 }
+
+@media (min-width: 601px) {
+  aside h2 {
+    text-align: left;
+  }
 }
