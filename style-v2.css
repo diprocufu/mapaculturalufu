@@ -1,0 +1,332 @@
+/* ===================================================
+   🧱 LAYOUT PRINCIPAL
+=================================================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px 48px 10px 10px;
+  text-align: center;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  overflow: visible; /* ✅ permite que menus flutuem corretamente */
+}
+
+#map {
+  flex: 3;
+  height: 100%;
+}
+
+aside {
+  flex: 1;
+  background: #ecf0f1;
+  padding: 10px;
+  padding-bottom: 40px;           /* ✅ espaço extra para menus no celular */
+  scroll-padding-top: 60px;       /* ✅ facilita retorno ao botão no celular */
+  overflow: visible;              /* ✅ libera menus flutuantes */
+  -webkit-overflow-scrolling: touch;
+  max-height: 100vh;
+  box-sizing: border-box;
+  position: relative;             /* ✅ necessário para menus absolutos */
+  z-index: 1000;                  /* ✅ garante que menus fiquem acima do mapa */
+}
+
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.9; /* opcional: suaviza o tom */
+}
+@media (max-width: 768px) {
+  footer {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  /* 1️⃣ Reduz o espaço vertical do cabeçalho sem alterar a fonte */
+  header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  /* 2️⃣ Reduz o espaçamento acima dos menus de espaços culturais */
+  aside {
+    padding-top: 6px;
+  }
+
+  /* 3️⃣ Aumenta a altura do mapa e empurra os menus para baixo */
+  #map {
+    height: 70vh;
+  }
+
+  .dropdown {
+    margin-top: 8px;
+  }
+  
+  .btn-cadastro {
+    margin-top: 8px;
+  }
+
+  .visit-counter {
+    margin-top: 6px;
+  }
+}
+
+/* ===================================================
+   🔲 BOTÃO TELA CHEIA
+=================================================== */
+.btn-fullscreen {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.btn-fullscreen:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+
+/* ===================================================
+   📂 DROPDOWN MENUS
+=================================================== */
+.dropdown {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.dropdown-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 4px;
+  color: white;
+}
+
+/* 🎓 UFU */
+aside .dropdown:nth-of-type(1) .dropdown-btn {
+  background: #3498db;
+}
+aside .dropdown:nth-of-type(1) .dropdown-btn:hover {
+  background: #2980b9;
+}
+
+/* 🏛️ Públicos */
+aside .dropdown:nth-of-type(2) .dropdown-btn {
+  background: #27ae60;
+}
+aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
+  background: #1e8449;
+}
+
+/* 🎭 Privados */
+aside .dropdown:nth-of-type(3) .dropdown-btn {
+  background: #e74c3c; /* vermelho */
+}
+aside .dropdown:nth-of-type(3) .dropdown-btn:hover {
+  background: #c0392b;
+}
+
+/* 🌱 Ponto de Cultura */
+aside .dropdown:nth-of-type(4) .dropdown-btn {
+  background: #9b59b6; /* roxo */
+}
+aside .dropdown:nth-of-type(4) .dropdown-btn:hover {
+  background: #8e44ad;
+}
+
+/* 🔽 Conteúdo do menu */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  border-radius: 4px;
+
+  max-height: 300px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background: #f1f1f1;
+}
+
+.dropdown.active .dropdown-content {
+  display: flex;
+}
+
+/* 📍 TÍTULOS DE CAMPUS DENTRO DO MENU UFU */
+.menu-titulo {
+  padding: 6px 10px;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  margin: 8px 0 4px 0; /* top, right, bottom, left */
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+/* ===================================================
+   🗺️ LEAFLET MAP
+=================================================== */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ===================================================
+   🎨 ÍCONES NO MENU
+=================================================== */
+.dropdown-content i {
+  margin-right: 6px;
+  color: #2c3e50;
+}
+
+
+/* ===================================================
+   🏷️ RÓTULOS FUTUROS (opcional)
+=================================================== */
+.bloco-label .label-chip {
+  padding: 2px 6px;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* ===================================================
+   ✍️ BOTÃO DE CADASTRO
+=================================================== */
+.btn-cadastro {
+  display: block;
+  background: #8e44ad;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.btn-cadastro:hover {
+  background: #732d91;
+}
+
+/* ===================================================
+   📍 BOTÃO LOCALIZAÇÃO DO USUÁRIO
+=================================================== */
+#btn-localizacao {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ===================================================
+   🔢 CONTADOR DE VISITAS
+=================================================== */
+.visit-counter {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  padding-left: 4px; /* opcional, para dar um respiro da borda */
+}
+.visit-counter img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* ===================================================
+   📱 RESPONSIVIDADE
+=================================================== */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  #map {
+    height: 45vh;
+    flex: none;
+  }
+
+  aside {
+    flex: none;
+    height: auto;
+    max-height: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dropdown-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+  .sobre-icone {
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.sobre-icone:hover {
+  color: #3498db; /* azul UFU para destacar no hover */
+}
+}
