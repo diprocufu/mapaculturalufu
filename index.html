@@ -26,41 +26,30 @@
       <h2>Espaços Culturais</h2>
       <!-- Container para espaços da cidade -->
       <div id="espacos-cidade"></div>
-      
-      <!-- Dropdown UFU -->
-      <div class="dropdown">
-        <button class="dropdown-btn">🎓 Espaços UFU</button>
-        <div class="dropdown-content" id="espacos-ufu"></div>
-      </div>
 
-      <!-- Dropdown Públicos -->
-      <div class="dropdown">
-        <button class="dropdown-btn" onclick="carregarCidade('Público')">🏛️ Espaços Públicos</button>
-        <div class="dropdown-content" id="espacos-publicos"></div>
-      </div>
+     <!-- Dropdown UFU -->
+    <div class="dropdown ufubtn">
+      <button class="dropdown-btn">🎓 Espaços UFU</button>
+      <div class="dropdown-content" id="espacos-ufu"></div>
+    </div>
 
-      <!-- Dropdown Privados -->
-      <div class="dropdown">
-        <button class="dropdown-btn" onclick="carregarCidade('Privado')">🎭 Espaços Privados</button>
-        <div class="dropdown-content" id="espacos-privados"></div>
-      </div>
+    <!-- Dropdown Públicos -->
+      <div class="dropdown publicobtn">
+      <button class="dropdown-btn" onclick="carregarCidade('Público')">🏛️ Espaços Públicos</button>
+      <div class="dropdown-content" id="espacos-publicos"></div>
+    </div>
 
-      <!-- Dropdown Ponto de Cultura -->
-      <div class="dropdown">
-        <button class="dropdown-btn" onclick="carregarCidade('Ponto de Cultura')">🌱 Pontos de Cultura</button>
-        <div class="dropdown-content" id="espacos-ponto"></div>
-      </div>
+    <!-- Dropdown Privados -->
+    <div class="dropdown privadobtn">
+      <button class="dropdown-btn" onclick="carregarCidade('Privado')">🎭 Espaços Privados</button>
+      <div class="dropdown-content" id="espacos-privados"></div>
+    </div>
 
-      <!-- Botão de cadastro -->
-      <div style="margin-top: 20px;">
-        <a href="https://forms.office.com/r/QnJH787q4F" target="_blank" class="btn-cadastro">
-          ✍️ Cadastrar novo espaço cultural
-        </a>
-      </div>
-      <!-- Contador de Acessos -->
-      <div class="visit-counter">
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=diprocufu.mapaculturalufu&title=Acessos&style=flat&color=purple"/>
-      </div>
+    <!-- Dropdown Ponto de Cultura -->
+    <div class="dropdown pontobtn">
+      <button class="dropdown-btn" onclick="carregarCidade('Ponto de Cultura')">🌱 Pontos de Cultura</button>
+      <div class="dropdown-content" id="espacos-ponto"></div>
+    </div>
     </aside>
   </main>
 

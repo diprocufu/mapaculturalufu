@@ -128,34 +128,31 @@ footer {
 }
 
 /* 🎓 UFU */
-aside .dropdown:nth-of-type(1) .dropdown-btn {
+.ufubtn .dropdown-btn {
   background: #3498db;
 }
-aside .dropdown:nth-of-type(1) .dropdown-btn:hover {
+.ufubtn .dropdown-btn:hover {
   background: #2980b9;
 }
 
-/* 🏛️ Públicos */
-aside .dropdown:nth-of-type(2) .dropdown-btn {
+.publicobtn .dropdown-btn {
   background: #27ae60;
 }
-aside .dropdown:nth-of-type(2) .dropdown-btn:hover {
+.publicobtn .dropdown-btn:hover {
   background: #1e8449;
 }
 
-/* 🎭 Privados */
-aside .dropdown:nth-of-type(3) .dropdown-btn {
-  background: #e74c3c; /* vermelho */
+.privadobtn .dropdown-btn {
+  background: #e74c3c;
 }
-aside .dropdown:nth-of-type(3) .dropdown-btn:hover {
+.privadobtn .dropdown-btn:hover {
   background: #c0392b;
 }
 
-/* 🌱 Ponto de Cultura */
-aside .dropdown:nth-of-type(4) .dropdown-btn {
-  background: #9b59b6; /* roxo */
+.pontobtn .dropdown-btn {
+  background: #9b59b6;
 }
-aside .dropdown:nth-of-type(4) .dropdown-btn:hover {
+.pontobtn .dropdown-btn:hover {
   background: #8e44ad;
 }
 
