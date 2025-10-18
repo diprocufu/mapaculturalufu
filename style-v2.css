@@ -301,15 +301,28 @@ footer {
     max-height: none;
     overflow-y: auto;
   }
+main {
+  flex-direction: column;
+}
+
+#map {
+  height: 60vh; /* ↓ reduzido para liberar espaço pro menu */
+  flex: none;
+}
+
+aside {
+  flex: none;
+  height: auto;
+  max-height: none;
+  overflow-y: auto;
+  z-index: 1000;
+  position: relative;
+}
 
   aside h2 {
     margin-top: 6px;
     font-size: 18px;
     text-align: center;
-  }
-
-  #map {
-    height: 85vh;
   }
 
   .dropdown {
