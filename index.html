@@ -50,6 +50,18 @@
       <button class="dropdown-btn" onclick="carregarCidade('Ponto de Cultura')">🌱 Pontos de Cultura</button>
       <div class="dropdown-content" id="espacos-ponto"></div>
     </div>
+
+    <!-- Botão de cadastro -->
+    <div style="margin-top: 20px;">
+      <a href="https://forms.office.com/r/QnJH787q4F" target="_blank" class="btn-cadastro">
+    ✍️ Cadastrar novo espaço cultural
+    </a>
+  </div>
+
+    <!-- Contador de Acessos -->
+    <div class="visit-counter">
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=diprocufu.mapaculturalufu&title=Acessos&style=flat&color=purple"/>
+    </div>
     </aside>
   </main>
 
@@ -165,7 +177,6 @@ const todosOsMarcadores = [];
 marker.bindPopup(
   `<b>${espaco.nome}</b><br>${espaco.endereco || ''}${telefone}${site}${email}${distanciaTexto}`
 );
-
 
           // Decide em qual lista (UFU ou Cidade)
           const categoria = (espaco.categoria || "").trim().toLowerCase();
