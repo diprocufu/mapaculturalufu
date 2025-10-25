@@ -1,6 +1,11 @@
 /* ===================================================
    🧱 LAYOUT PRINCIPAL
 =================================================== */
+:root {
+  --fonte-padrao: 14px;
+  --peso-padrao: normal;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -48,7 +53,7 @@ footer {
   color: white;
   text-align: center;
   padding: 8px;
-  font-size: 14px;
+  font-size: var(--fonte-padrao);
   line-height: 1.4;
   opacity: 0.9;
 }
@@ -65,7 +70,7 @@ footer {
   border: 1px solid #ccc;
   padding: 8px 12px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: var(--fonte-padrao);
   cursor: pointer;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
@@ -98,7 +103,7 @@ footer {
   border: 0;
   border-radius: 8px;
   background: rgba(255,255,255,0.15);
-  color: #fff;
+  color: #2c3e50;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -117,14 +122,16 @@ footer {
 }
 
 .dropdown-btn {
-  width: 100%;
+  background-color: orange;
+  color: white;
+  font-weight: var(--peso-padrao);
+  font-size: var(--fonte-padrao);
   padding: 10px;
   border: none;
-  cursor: pointer;
+  width: 100%;
   text-align: left;
-  font-size: 16px;
-  border-radius: 4px;
-  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .ufubtn .dropdown-btn {
@@ -155,6 +162,13 @@ footer {
   background: #8e44ad;
 }
 
+.categoria-btn .dropdown-btn {
+  background: orange;
+}
+.categoria-btn .dropdown-btn:hover {
+  background: #e67e22;
+}
+
 .dropdown-content {
   position: absolute;
   top: 100%;
@@ -177,10 +191,10 @@ footer {
 .dropdown-content a {
   padding: 8px 10px;
   text-decoration: none;
-  color: #333;
+  color: #2c3e50;
   display: block;
   border-bottom: 1px solid #eee;
-  font-size: 14px;
+  font-size: var(--fonte-padrao);
 }
 
 .dropdown-content a:hover {
@@ -194,18 +208,31 @@ footer {
 .menu-titulo {
   padding: 6px 10px;
   background-color: #f0f0f0;
-  font-weight: bold;
+  font-weight: var(--peso-padrao);
   border-top: 1px solid #ccc;
   margin: 8px 0 4px 0;
-  font-size: 14px;
+  font-size: var(--fonte-padrao);
   color: #2c3e50;
 }
 
+.sobre-icone {
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: var(--fonte-padrao);
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  
 /* ===================================================
    🎨 ÍCONES NO MENU
 =================================================== */
 .dropdown-content i {
   margin-right: 6px;
+  color: #2c3e50;
+}
+
+.custom-icon i {
+  font-size: 24px;
   color: #2c3e50;
 }
 
@@ -235,8 +262,10 @@ footer {
   padding: 10px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: var(--peso-padrao);
+  font-size: var(--fonte-padrao);
   margin-bottom: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-cadastro:hover {
@@ -265,19 +294,12 @@ footer {
   }
 
   .dropdown-btn {
-    font-size: 14px;
+    font-size: var(--fonte-padrao);
     padding: 8px;
   }
 
   footer {
     font-size: 12px;
-  }
-
-  .sobre-icone {
-    margin-left: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    vertical-align: middle;
   }
 
   .sobre-icone:hover {
@@ -329,14 +351,14 @@ aside {
     margin-top: 8px;
   }
 
-  .dropdown-btn {
-    font-size: 15px;
-  }
+ .dropdown-btn {
+  font-size: var(--fonte-padrao);
+}
 
-  .btn-cadastro {
-    margin-top: 8px;
-    font-size: 15px;
-  }
+.btn-cadastro {
+  margin-top: 8px;
+  font-size: var(--fonte-padrao);
+}
 
   .visit-counter {
     margin-top: 6px;

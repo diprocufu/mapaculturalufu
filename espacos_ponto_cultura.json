@@ -1,28 +1,28 @@
 {
-  "espacos": [                           
+  "espacos": [
     {
       "nome": "Instituto Circo da Vida",
-      "tipo": "centro",
+      "tipo": "Ponto de Cultura",
       "latitude": -18.897013545128743,
       "longitude": -48.28262012065498,
       "endereco": "Rua Doutor Leopoldo de Castro, 400, Uberlândia - MG",
       "categoria": "Cidade",
-      "tipo": "Ponto de Cultura",
       "telefone": "(34) 3219-9477",
       "site": "www.circodavida.org",
-      "email": "Institutocircodavida@gmail.com"
+      "email": "Institutocircodavida@gmail.com",
+      "formato": "centro"
     },
     {
       "nome": "Trupe de Truões",
-      "tipo": "teatro",
+      "tipo": "Ponto de Cultura",
       "latitude": -18.919399712611096,
       "longitude": -48.25148504812082,
       "endereco": "Av. Ana Godoy De Sousa, 381 - Santa Mônica, Uberlândia - MG",
       "categoria": "Cidade",
-      "tipo": "Ponto de Cultura",
       "telefone": "(34)3237-9440",
       "site": "http://www.trupedetruoes.com.br/",
-      "email": "trupedetruoes@gmail.com / contatotruoes@gmail.com"
+      "email": "trupedetruoes@gmail.com / contatotruoes@gmail.com",
+      "formato": "teatro"
     }
   ]
 }
