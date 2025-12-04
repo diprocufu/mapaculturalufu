@@ -23,6 +23,18 @@
       "site": "http://www.trupedetruoes.com.br/",
       "email": "trupedetruoes@gmail.com / contatotruoes@gmail.com",
       "formato": "teatro"
+    },
+    {
+      "nome": "Coletivo Musical RAP",
+      "tipo": "Ponto de Cultura",
+      "latitude": -18.911800185351847,
+      "longitude": -48.27633095578572,
+      "endereco": "Avenida João Pessoa, SN, TEATRO DE ARENA, Martins, 38400-338, Uberlândia, MG",
+      "categoria": "Pontos de Cultura",
+      "telefone": "(34) 98822-5637",
+      "site": "https://culturaviva.cultura.gov.br/agente/610/#info",
+      "email": "rogerdrumond@hotmail.com",
+      "formato": "outro"
     }
   ]
 }

@@ -36,6 +36,18 @@
       "email": "museumunicipal@uberlandia.mg.gov.br",
       "formato": "museu"
     },
+      {
+      "nome": "Reserva Técnica do Museu Municipal de Uberlândia",
+      "tipo": "Público",
+      "latitude": -18.924218508235214,
+      "longitude": -48.283612217074655,
+      "endereco": "Praça Cícero Macedo, 19, Fundinho. Uberlândia, 38400-216",
+      "categoria": "Cidade",
+      "telefone": "34 3235-0971",
+      "site": "",
+      "email": "documentacao@uberlandia.mg.gov.br",
+      "formato": "Museu"
+    },
     {
       "nome": "Coreto Municipal",
       "tipo": "Público",
@@ -107,6 +119,18 @@
       "site": "",
       "email": "bandamunicipal@uberlandia.mg.gov.br",
       "formato": "música"
+    },
+    {
+      "nome": "Teatro de Arena (Redondo)",
+      "tipo": "Público",
+      "latitude": -18.911883,
+      "longitude": -48.276328,
+      "endereco": "Praça Sérgio Pacheco, Av. João Pessoa - Centro, Uberlândia - MG",
+      "categoria": "cidade",
+      "telefone": "",
+      "site": "",
+      "email": "",
+      "formato": ["teatro", "praça"]
     },
     {
       "nome": "Teatro de Bolso do Mercado Municipal",
