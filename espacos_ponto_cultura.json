@@ -35,6 +35,18 @@
       "site": "https://culturaviva.cultura.gov.br/agente/610/#info",
       "email": "rogerdrumond@hotmail.com",
       "formato": "outro"
+    },
+    {
+      "nome": "Ponto de Cultura Pérola Negra",
+      "tipo": "Ponto de Cultura;",
+      "latitude": -18.919482615878888,
+      "longitude": -48.333542428835685,
+      "endereco": "Rua: Roberto Margonari 820 Cidade de Uberlândia bairro Luizote de Freitas -CEP 38414-465",
+      "categoria": "Pontos de Cultura",
+      "telefone": "(11)971296124",
+      "site": "https://linktr.ee/ongperolanegra",
+      "email": "accipenperolanegra@gmail.com",
+      "formato": "centro"
     }
   ]
 }
