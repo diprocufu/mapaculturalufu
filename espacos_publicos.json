@@ -1,6 +1,78 @@
 {
   "espacos": [
     {
+      "nome": "Banda Sinfônica Municipal",
+      "tipo": "Público",
+      "latitude": -18.915957011739415,
+      "longitude": -48.2750693869828,
+      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
+      "categoria": "Cidade",
+      "telefone": "(34) 3236-8011",
+      "site": "",
+      "email": "bandamunicipal@uberlandia.mg.gov.br",
+      "formato": "música"
+    },
+    {
+      "nome": "Casa da Cultura de Uberlândia",
+      "tipo": "Público",
+      "latitude": -18.924113136959885,
+      "longitude": -48.2854482827609,
+      "endereco": "Praça Cel. Carneiro, 89 - Fundinho",
+      "categoria": "Cidade",
+      "telefone": "(34) 3255-8252",
+      "site": "",
+      "email": "casadacultura@uberlandia.mg.gov.br",
+      "formato": "centro"
+    },
+    {
+      "nome": "Centro Municipal de Cultura",
+      "tipo": "Público",
+      "latitude": -18.915957011739415,
+      "longitude": -48.2750693869828,
+      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
+      "categoria": "Cidade",
+      "telefone": "(34) 3236-8011",
+      "site": "https://www.uberlandia.mg.gov.br/prefeitura/secretarias/cultura-e-turismo/",
+      "email": "secretariamunicipaldecultura@uberlandia.mg.gov.br",
+      "formato": "centro"
+    },
+    {
+      "nome": "CEU Shopping Park",
+      "tipo": "Público",
+      "latitude": -18.99080027147741,
+      "longitude": -48.26741416931792,
+      "endereco": "R. Juvenília Mota Leite, 700 - Shopping Park, Uberlândia - MG",
+      "categoria": "Cidade",
+      "telefone": "(34)3253-1204",
+      "site": "",
+      "email": "",
+      "formato": "teatro"
+    },
+    {
+      "nome": "Cine Teatro Nininha Rocha",
+      "tipo": "Público",
+      "latitude": -18.915957011739415,
+      "longitude": -48.2750693869828,
+      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
+      "categoria": "Cidade",
+      "telefone": "(34) 3235-9182",
+      "site": "",
+      "email": "cineteatronininharocha@uberlandia.mg.gov.br",
+      "formato": "teatro"
+    },
+    {
+      "nome": "Coreto Municipal",
+      "tipo": "Público",
+      "latitude": -18.9236416511344,
+      "longitude": -48.281639580375206,
+      "endereco": "Praça Clarimundo Carneiro, 67 - Centro",
+      "categoria": "Cidade",
+      "telefone": "(34) 3236-8011",
+      "site": "https://www.uberlandia.mg.gov.br/prefeitura/secretarias/cultura-e-turismo/",
+      "email": "secretariamunicipaldecultura@uberlandia.mg.gov.br",
+      "formato": "praça"
+    },
+    {
       "nome": "Conservatório Estadual de Música Cora Pavan Capparelli",
       "tipo": "Público",
       "latitude": -18.899704161857432,
@@ -36,42 +108,6 @@
       "email": "museumunicipal@uberlandia.mg.gov.br",
       "formato": "museu"
     },
-      {
-      "nome": "Reserva Técnica do Museu Municipal de Uberlândia",
-      "tipo": "Público",
-      "latitude": -18.924218508235214,
-      "longitude": -48.283612217074655,
-      "endereco": "Praça Cícero Macedo, 19, Fundinho. Uberlândia, 38400-216",
-      "categoria": "Cidade",
-      "telefone": "34 3235-0971",
-      "site": "",
-      "email": "documentacao@uberlandia.mg.gov.br",
-      "formato": "Museu"
-    },
-    {
-      "nome": "Coreto Municipal",
-      "tipo": "Público",
-      "latitude": -18.9236416511344,
-      "longitude": -48.281639580375206,
-      "endereco": "Praça Clarimundo Carneiro, 67 - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3236-8011",
-      "site": "https://www.uberlandia.mg.gov.br/prefeitura/secretarias/cultura-e-turismo/",
-      "email": "secretariamunicipaldecultura@uberlandia.mg.gov.br",
-      "formato": "praça"
-    },
-    {
-      "nome": "Centro Municipal de Cultura",
-      "tipo": "Público",
-      "latitude": -18.915957011739415,
-      "longitude": -48.2750693869828,
-      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3236-8011",
-      "site": "https://www.uberlandia.mg.gov.br/prefeitura/secretarias/cultura-e-turismo/",
-      "email": "secretariamunicipaldecultura@uberlandia.mg.gov.br",
-      "formato": "centro"
-    },
     {
       "nome": "Oficina Cultural de Uberlândia",
       "tipo": "Público",
@@ -85,40 +121,16 @@
       "formato": "centro"
     },
     {
-      "nome": "Casa da Cultura de Uberlândia",
+      "nome": "Reserva Técnica do Museu Municipal de Uberlândia",
       "tipo": "Público",
-      "latitude": -18.924113136959885,
-      "longitude": -48.2854482827609,
-      "endereco": "Praça Cel. Carneiro, 89 - Fundinho",
+      "latitude": -18.924218508235214,
+      "longitude": -48.283612217074655,
+      "endereco": "Praça Cícero Macedo, 19, Fundinho. Uberlândia, 38400-216",
       "categoria": "Cidade",
-      "telefone": "(34) 3255-8252",
+      "telefone": "34 3235-0971",
       "site": "",
-      "email": "casadacultura@uberlandia.mg.gov.br",
-      "formato": "centro"
-    },
-    {
-      "nome": "Cine Teatro Nininha Rocha",
-      "tipo": "Público",
-      "latitude": -18.915957011739415,
-      "longitude": -48.2750693869828,
-      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3235-9182",
-      "site": "",
-      "email": "cineteatronininharocha@uberlandia.mg.gov.br",
-      "formato": "teatro"
-    },
-    {
-      "nome": "Banda Sinfônica Municipal",
-      "tipo": "Público",
-      "latitude": -18.915957011739415,
-      "longitude": -48.2750693869828,
-      "endereco": "Praça Prof. Jacy de Assis - s/n - Centro",
-      "categoria": "Cidade",
-      "telefone": "(34) 3236-8011",
-      "site": "",
-      "email": "bandamunicipal@uberlandia.mg.gov.br",
-      "formato": "música"
+      "email": "documentacao@uberlandia.mg.gov.br",
+      "formato": "museu"
     },
     {
       "nome": "Teatro de Arena (Redondo)",
@@ -126,11 +138,11 @@
       "latitude": -18.911883,
       "longitude": -48.276328,
       "endereco": "Praça Sérgio Pacheco, Av. João Pessoa - Centro, Uberlândia - MG",
-      "categoria": "cidade",
+      "categoria": "Cidade",
       "telefone": "",
       "site": "",
       "email": "",
-      "formato": ["teatro", "praça"]
+      "formato": "teatro"
     },
     {
       "nome": "Teatro de Bolso do Mercado Municipal",
@@ -154,18 +166,6 @@
       "telefone": "(34) 3235-1568",
       "site": "",
       "email": "teatromunicipaluberlandia@gmail.com",
-      "formato": "teatro"
-    },
-    {
-      "nome": "CEU Shopping Park",
-      "tipo": "Público",
-      "latitude": -18.99080027147741,
-      "longitude": -48.26741416931792,
-      "endereco": "R. Juvenília Mota Leite, 700 - Shopping Park, Uberlândia - MG",
-      "categoria": "Cidade",
-      "telefone": "(34)3253-1204",
-      "site": "",
-      "email": "",
       "formato": "teatro"
     }
   ]

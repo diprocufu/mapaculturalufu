@@ -166,11 +166,11 @@
     },
     {
       "nome": "Laboratório Galeria-Aquário",
-      "tipo": "público",
+      "tipo": "Público",
       "latitude": -18.918392905206264,
       "longitude": -48.255453112868,
       "endereco": "Curso de Artes Visuais\nBloco 1I, Campus Santa Mônica, Uberlândia\nTel.: (34) 3239-4244",
-      "categoria": "Espaços UFU",
+      "categoria": "UFU",
       "campus": "Santa Mônica",
       "telefone": "Tel.: (34) 3239-4244",
       "site": "",
@@ -242,7 +242,6 @@
       "email": "musindio@ufu.br",
       "formato": "museu"
     },
-
     {
       "nome": "Museu Universitário de Arte (MUnA)",
       "tipo": "Público",
@@ -275,7 +274,7 @@
       "latitude": -18.920212501246784,
       "longitude": -48.261464449690685,
       "endereco": "Avenida João Naves de Ávila, 2121. Bloco 3P - Reitoria. Prefeitura Universitária (segundo andar)",
-      "categoria": "Espaços UFU",
+      "categoria": "UFU",
       "campus": "Santa Mônica",
       "telefone": "(34) 3291-8955",
       "site": "www.sustentavel.ufu.br / www.instagram.com/ufusustentavel",

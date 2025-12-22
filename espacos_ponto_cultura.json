@@ -1,6 +1,18 @@
 {
   "espacos": [
     {
+      "nome": "Coletivo Musical RAP",
+      "tipo": "Ponto de Cultura",
+      "latitude": -18.911800185351847,
+      "longitude": -48.27633095578572,
+      "endereco": "Avenida João Pessoa, SN, TEATRO DE ARENA, Martins, 38400-338, Uberlândia, MG",
+      "categoria": "Cidade",
+      "telefone": "(34) 98822-5637",
+      "site": "https://culturaviva.cultura.gov.br/agente/610/#info",
+      "email": "rogerdrumond@hotmail.com",
+      "formato": "outro"
+    },
+    {
       "nome": "Instituto Circo da Vida",
       "tipo": "Ponto de Cultura",
       "latitude": -18.897013545128743,
@@ -10,6 +22,18 @@
       "telefone": "(34) 3219-9477",
       "site": "www.circodavida.org",
       "email": "Institutocircodavida@gmail.com",
+      "formato": "centro"
+    },
+    {
+      "nome": "Ponto de Cultura Pérola Negra",
+      "tipo": "Ponto de Cultura",
+      "latitude": -18.919482615878888,
+      "longitude": -48.333542428835685,
+      "endereco": "Rua: Roberto Margonari 820 Cidade de Uberlândia bairro Luizote de Freitas -CEP 38414-465",
+      "categoria": "Cidade",
+      "telefone": "(11)971296124",
+      "site": "https://linktr.ee/ongperolanegra",
+      "email": "accipenperolanegra@gmail.com",
       "formato": "centro"
     },
     {
@@ -23,30 +47,6 @@
       "site": "http://www.trupedetruoes.com.br/",
       "email": "trupedetruoes@gmail.com / contatotruoes@gmail.com",
       "formato": "teatro"
-    },
-    {
-      "nome": "Coletivo Musical RAP",
-      "tipo": "Ponto de Cultura",
-      "latitude": -18.911800185351847,
-      "longitude": -48.27633095578572,
-      "endereco": "Avenida João Pessoa, SN, TEATRO DE ARENA, Martins, 38400-338, Uberlândia, MG",
-      "categoria": "Pontos de Cultura",
-      "telefone": "(34) 98822-5637",
-      "site": "https://culturaviva.cultura.gov.br/agente/610/#info",
-      "email": "rogerdrumond@hotmail.com",
-      "formato": "outro"
-    },
-    {
-      "nome": "Ponto de Cultura Pérola Negra",
-      "tipo": "Ponto de Cultura;",
-      "latitude": -18.919482615878888,
-      "longitude": -48.333542428835685,
-      "endereco": "Rua: Roberto Margonari 820 Cidade de Uberlândia bairro Luizote de Freitas -CEP 38414-465",
-      "categoria": "Pontos de Cultura",
-      "telefone": "(11)971296124",
-      "site": "https://linktr.ee/ongperolanegra",
-      "email": "accipenperolanegra@gmail.com",
-      "formato": "centro"
     }
   ]
 }
